@@ -2,13 +2,17 @@
 	Header
 *********************************************** -->
 <div id="header" class="clearfix">
-<div class="logo left"><%= link_to '<img src="/images/logo.png" alt="Libron(リブロン) - 無料で本が読めるライフハック" width="172" height="77" />'.html_safe, :controller => :top, :action => :index %></div>
+<div class="logo left">
+	<%= link_to root_path do %>
+		<%= image_tag 'logo.png', alt: APP_CONFIG[:site_title], width: 172, height: 77 %>
+	<% end %>
+</div>
 <% unless @no_ad %>
 <%= render :partial => 'shared/adsense' %>
 <div class="social_buttons clearfix">
 <div style="margin-right:20px;"><a href="http://b.hatena.ne.jp/entry/http://libron.net" class="hatena-bookmark-button" data-hatena-bookmark-title="Libron(リブロン) - 図書館をもっと身近に" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></div>
 <div style="margin-right:15px;"><a href="http://twitter.com/share" class="twitter-share-button" data-url="http://libron.net" data-count="horizontal" data-lang="ja">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></div>
-<div><iframe src="http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Flibronapp&amp;send=true&amp;layout=button_count&amp;width=200&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:21px;" allowTransparency="true"></iframe></div>
+<div><iframe src="http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Flibronapp&amp;send=true&amp;layout=button_count&amp;width=200&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:21px;" allowTransparency="true"></iframe></div>
 </div>
 <% end %>
 <%= render :partial => 'shared/navigation' unless (@no_navbar || (params[:controller] == 'top' && params[:action] == 'index') || (params[:controller] == 'top' && params[:action] == 'contact') || (params[:controller] == 'iphone') || (params[:controller] == 'lib_urls')) %>
