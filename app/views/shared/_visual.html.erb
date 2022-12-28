@@ -21,7 +21,7 @@
 %>
 <ul id="output">
   <% visuals.each do |visual| %>
-    <li><%= image_tag "images-home/#{visual[:filename]}", alt: visual[:alt], width: "650", height: "250" %></li>
+    <li><%= image_tag "/images/images-home/#{visual[:filename]}", alt: visual[:alt], width: "650", height: "250" %></li>
   <% end %>
 </ul>
 <!-- /div#visual --></div>

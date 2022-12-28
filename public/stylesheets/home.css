@@ -18,7 +18,7 @@
 ---------------------- */
 #visual {
 	position: relative;
-	background: image-url("images-home/visual_bg.png") top left no-repeat;
+	background: url(/images/images-home/visual_bg.png) top left no-repeat;
 	width: 920px;
 	height: 270px;
 	left: -8px;
