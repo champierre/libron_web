@@ -1,0 +1,13 @@
+<% if !@no_navigation_menu %>
+<ul id="navigation">
+<% if params[:action] == 'install' %>
+<li><%= link_to '<img src="/images/nav_home.png" alt="ホーム" width="192" height="40" class="rollover" />'.html_safe, :controller => :top, :action => :index %></li>
+<li><%= link_to '<img src="/images/nav_howtouse.png" alt="つかいかた" width="191" height="40" class="rollover" />'.html_safe, :controller => :top, :action => :usage %></li>
+<li><%= link_to '<img src="/images/nav_howtoinstall_over.png" alt="インストール方法" width="191" height="40" />'.html_safe, :controller => :top, :action => :install %></li>
+<% else %>
+<li><%= link_to '<img src="/images/nav_home.png" alt="ホーム" width="192" height="40" class="rollover" />'.html_safe, :controller => :top, :action => :index %></li>
+<li><%= link_to '<img src="/images/nav_howtouse_over.png" alt="つかいかた" width="191" height="40" />'.html_safe, :controller => :top, :action => :usage %></li>
+<li><%= link_to '<img src="/images/nav_howtoinstall.png" alt="インストール方法" width="191" height="40" class="rollover" />'.html_safe, :controller => :top, :action => :install %></li>
+<% end %>
+</ul>
+<% end %>

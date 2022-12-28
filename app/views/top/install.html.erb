@@ -1,0 +1,79 @@
+<!-- ===============================
+	Main Area
+=============================== -->
+<div id="main-area">
+<h1><img src="/images/images-subpage/h1_howtoinstall.png" alt="インストール方法" width="650" height="72" /></h1>
+
+<% if params[:browser].blank? %>
+<p>ご利用のブラウザの種類を自動で検出して、対応するインストール方法を表示しています。</p>
+<% end %>
+
+<p>別のブラウザをご利用の場合は、以下より選んで下さい。</p>
+
+<ul>
+<li><%= link_to "» Google Chrome 版のインストール方法", "?browser=Chrome" %></li>
+<li><%= link_to "» Firefox Greasemonkey 版のインストール方法", "?browser=Firefox" %></li>
+</ul>
+
+<% if @browser == 'Chrome' %>
+
+<div class="for-chrome-user" id="chrome">
+<h2><img src="/images/images-subpage/h2_forchromeuser.png" alt="Google Chrome ユーザーの方へ" width="650" height="80" /></h2>
+
+<div class="flow">
+<h2 class="num1">Libron をインストールします</h2>
+<p>以下のリンク先より、Libron の Chrome Extension 版をインストールすれば完了です。<br />
+<a target="_blank" href="<%= $CHROME_EXTENSION_URL %>">&raquo; Libron - Google Chrome extension gallery</a></p>
+<!-- /div.flow --></div>
+<!-- /div#chrome --></div>
+
+<% elsif @browser == 'Firefox' %>
+
+<div class="for-firefox-user" id="firefox">
+
+<h2><img src="/images/images-subpage/h2_forfirefoxuser.png" alt="Firefox ユーザーの方へ" width="650" height="80" /></h2>
+
+<div class="flow">
+<h2 class="num1">Tampermonkeyをインストールします</h2>
+<p>LibronをFirefoxで利用するには、まずGreasemonkey互換のTampermonkeyというAdd-onをインストールする必要があります。</p>
+<p>以下のリンク先よりインストールして下さい。</p>
+<p><a target="_blank" href="https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/">&raquo; Tampermonkey :: Add-ons for Firefox</a></p>
+
+<h2 class="num2">Libronをインストールします</h2>
+<p>次に以下のリンク先より、Libron Greasemonkey版をインストールします。</p>
+<p><a target="_blank" href="<%= $GM_SCRIPT_URL %>">&raquo; Libron for Greasemonkey</a></p>
+<p>上記リンクをクリックすると、Tampermonkeyの画面が表示され、インストールの確認を求められます。「インストール」をクリックしてLibronをインストールします。</p>
+<p><img src="/images/tampermonkey.png" alt="Libron Greasemonkey版のインストール" width="634" height="478"/></p>
+
+<h2 class="num3">クロスドメインアクセスの許可</h2>
+<p>Libronをインストールできたら、Amazonのページ(https://www.amazon.co.jp/)にアクセスします。</p>
+<p>Libronの最新情報と蔵書検索の結果を取得するためLibronはlibron.netとapi.calil.jpにアクセスする必要があります。2つのサーバーに対するクロスドメインアクセスの許可を求める画面が表示されるので、両方とも「Always allow domain」のボタンをクリックして許可してください。</p>
+<p>以上でLibronをFirefoxで使う準備は完了です。</p>
+<p><img src="/images/tampermonkey2.png" alt="Libron Greasemonkey版のインストール" width="650" height="449"/></p>
+<p><img src="/images/tampermonkey3.png" alt="Libron Greasemonkey版のインストール" width="650" height="341"/></p>
+<!-- /div.flow --></div>
+<!-- /div#firefox --></div>
+
+<% elsif @browser == 'Safari' %>
+
+<div class="for-iphone-user" id="iphone">
+<h2><img src="/images/images-subpage/h2_foriphoneuser.png" alt="iPhone ユーザーの方へ" width="650" height="80" /></h2>
+
+<div style="margin:2em 0 13px">
+<div class="flow">
+<p>下記ページをご覧ください。</p>
+<p><a href="/iphone">&raquo; iPhone 版 Libron について</a></p>
+<!-- /div.flow --></div>
+</div>
+
+<!-- /div#iphone --></div>
+
+<% else %>
+
+<div style="margin-top: 20px;">
+<p>申し訳ありません。ご利用のブラウザには Libron は対応しておりません。</p>
+</div>
+
+<% end %>
+
+<!-- /div#main-area --></div>

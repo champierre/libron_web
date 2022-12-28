@@ -1,0 +1,14 @@
+default:
+  aws_access_key_id: "AKIAIVVU3OJAYEWW3HNQ"
+  aws_secret_key: "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"
+  amazon_associate_tag: "tsukurusha-22"
+  site_title: "Libron(リブロン) – 図書館をもっと身近に"
+
+development:
+  domain: localhost:3000
+
+test:
+  domain: test.host
+
+production:
+  domain: example.com

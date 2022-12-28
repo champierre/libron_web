@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<%#= javascript_include_tag :defaults %>
+<link rel="stylesheet" href="/stylesheets/blueprint/screen.css" type="text/css" media="screen, projection">
+<link rel="stylesheet" href="/stylesheets/blueprint/print.css" type="text/css" media="print">
+<!--[if lt IE 8]><link rel="stylesheet" href="/stylesheets/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+<%= stylesheet_link_tag 'old' %>
+<title><%= APP_CONFIG[:site_title] %><%= " #{strip_tags(@title)}" if @title %></title>
+<meta name="keywords" content="図書館,Amazon,検索,蔵書,Greasemonkey,Firefox">
+<meta name="description" content="Libron は Amazon のページから最寄りの図書館の蔵書を検索できる便利なツールです">
+<script type="text/javascript" charset="UTF-8">
+//<![CDATA[
+<%= @content_for_page_scripts %>
+//]]>
+</script>
+</head>
+<body>
+<div class="container">
+<%= render :partial => "oldshared/header" %>
+<%= render :partial => "oldshared/menu" %>
+<div class="span-18 main">
+<%#= render :partial => "oldshared/amazon_good_deal" %>
+<% if flash[:notice] -%>
+<p class="notice"><%= h flash[:notice] %></p>
+<% end -%>
+<% if flash[:error] -%>
+<p class="error"><%= h flash[:error] %></p>
+<% end -%>
+<%= "<h1>#{@title}</h1>" if @title %>
+<%= yield :layout %>
+</div>
+<%= render :partial => "oldshared/right_sidebar" %>
+<%= render :partial => "oldshared/footer" %>
+</div>
+<%= render :partial => "shared/google_analytics" %>
+<%#= render :partial => "oldshared/follow_me_badge" %>
+</body>
+</html>

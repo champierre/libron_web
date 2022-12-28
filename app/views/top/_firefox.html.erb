@@ -1,0 +1,26 @@
+<h2>インストール(for Firefox)<%= image_tag 'firefox-logo.png', :style => 'vertical-align:middle' %></h2>
+
+<div class="notice">
+<p>使っているブラウザが Firefox でない場合は、以下から選び直してください。</p>
+
+<ul>
+  <li><%= link_to 'Internet Explorer', :controller => 'top', :action => 'install', :browser => 'ie' %></li>
+  <li><%= link_to 'Safari', :controller => 'top', :action => 'install', :browser => 'safari' %></li>
+</ul>
+</div>
+
+<div class="section">
+<h3 class="border-bottom">1. Greasemonkey のインストール</h3>
+
+<p>Libron を利用するには Firefox の拡張機能 Greasemonkey が必要です。</p>
+
+<p>Greasemonkey をインストールしていない場合は、以下よりダウンロードおよびインストールをおこなってください。</p>
+
+<a href="https://addons.mozilla.org/ja/firefox/addon/748" target="_blank"><%= image_tag 'gm_icon.png', :border => 0 %></a> <a href="https://addons.mozilla.org/ja/firefox/addon/748" target="_blank">Greasemonkey</a>
+</div>
+
+<div class="section">
+<h3 class="border-bottom">2. Libron のインストール</h3>
+<p>以下をクリックし、Libron の Greasemonkey スクリプトをインストールすれば完了です。</p>
+<%= image_tag 'cog.png' %> <%= link_to 'libron.user.js', 'http://github.com/champierre/libron/raw/master/libron.user.js', :target => "_blank" %>
+</div>

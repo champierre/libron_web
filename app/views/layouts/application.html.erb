@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="keywords" content="リブロン,図書館,Amazon,カーリル,検索,蔵書,アドオン,addon,Firefox,Chrome,拡張,グリモン,Greasemonkey,無料,ライフハック,lifehack,iPhone" />
+<meta name="description" content="Libron(リブロン)は、カーリルAPIを使いAmazonのページから最寄りの図書館(全国7000以上の図書館に対応)の蔵書を検索できる便利なツールです。iPhone版、Firefox Greasemonkey版、Chrome Extension版を配布しています。" />
+<title><%= "#{strip_tags(@title)} | " if @title %><%= APP_CONFIG[:site_title] %></title>
+<link href="/stylesheets/import.css" rel="stylesheet" type="text/css" media="screen,print" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="/javascripts/jquery.featureList-1.0.0.js"></script>
+<script type="text/javascript" src="/javascripts/function.js"></script>
+<% if params[:controller] == 'liburls' %>
+<script type="text/javascript" src="/javascripts/liburls.js"></script>
+<script type="text/javascript" src="/javascripts/js.cookie.js"></script>
+<% end %>
+<meta property="og:image" content="http://libron.net/images/logo.png" />
+<meta name="apple-itunes-app" content="app-id=478517535">
+<%- if @content_for_page_scripts -%>
+<script type="text/javascript" charset="UTF-8">
+//<![CDATA[
+<%= @content_for_page_scripts %>
+//]]>
+</script>
+<%- end -%>
+</head>
+<body id="<%= (params[:controller] == 'top' && params[:action] == 'index') ? 'home' : 'subpage' %>">
+
+<%= render :partial => "shared/facebook_like_box_script" %>
+
+<div id="container">
+<%= render :partial => "shared/header" %>
+
+<!-- ***********************************************
+	Contents
+*********************************************** -->
+<div id="contents" class="clearfix">
+<%= render :partial => 'shared/visual' if params[:controller] == 'top' && params[:action] == 'index' %>
+<%= render :partial => 'shared/top_navigation' if params[:controller] == 'top' && params[:action] == 'index' %>
+<div class="wrapper">
+<%= yield :layout %>
+<%= render :partial => "shared/right_sidebar" unless @no_sidebar %>
+<!-- /div.wrapper --></div>
+<!-- div#contents --></div>
+
+<%= render :partial => "shared/footer" %>
+</div>
+<%= render :partial => "shared/google_analytics" %>
+</body>
+</html>
