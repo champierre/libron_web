@@ -11,11 +11,17 @@
 <li><a href="javascript:;">2. 本を検索</a></li>
 <li><a href="javascript:;">3. 図書館のページにジャンプ</a></li>
 </ul>
-
+<%
+  visuals = [
+    {filename: 'visual_0.png', alt: 'Library + Amazon'},
+    {filename: 'visual_1.png', alt: '1. 図書館を選択'},
+    {filename: 'visual_2.png', alt: '2. 本を検索'},
+    {filename: 'visual_3.png', alt: '3. 図書館のページにジャンプ'}
+  ]
+%>
 <ul id="output">
-<li><img src="/images/images-home/visual_0.png" alt="Library + Amazon" width="650" height="250" /></li>
-<li><img src="/images/images-home/visual_1.png" alt="1. 図書館を選択" width="650" height="250" /></li>
-<li><img src="/images/images-home/visual_2.png" alt="2. 本を検索" width="650" height="250" /></li>
-<li><img src="/images/images-home/visual_3.png" alt="3. 図書館のページにジャンプ" width="650" height="250" /></li>
+  <% visuals.each do |visual| %>
+    <li><%= image_tag "images-home/#{visual[:filename]}", alt: visual[:alt], width: "650", height: "250" %></li>
+  <% end %>
 </ul>
 <!-- /div#visual --></div>

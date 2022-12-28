@@ -3,8 +3,16 @@
 =============================== -->
 <div id="navigation">
 <ul class="clearfix">
-<li><%= link_to '<img src="/images/images-home/btn_howtouse.png" alt="つかいかた" width="324" height="95" class="rollover" />'.html_safe, :controller => :top, :action => :usage %></li>
-<li><%= link_to '<img src="/images/images-home/btn_howtoinstall.png" alt="インストール方法" width="324" height="95" class="rollover" />'.html_safe, :controller => :top, :action => :install %></li>
+<li>
+  <%= link_to controller: :top, action: :usage do %>
+	  <%= image_tag "images-home/btn_howtouse.png", alt: "つかいかた", width: "324", height: "95", class: "rollover" %>
+	<% end %>
+</li>
+<li>
+  <%= link_to controller: :top, action: :install do %>
+	  <%= image_tag "images-home/btn_howtoinstall.png", alt: "インストール方法", width: "324", height: "95", class: "rollover" %>
+	<% end %>
+</li>
 <li class="last">
 <ol class="download">
 <li class="upperline"><a href="<%= $CHROME_EXTENSION_URL %>" target="_blank"><img src="/images/images-home/btn_dl_chrome.png" alt="Chrome Extension版をダウンロード" title="Chrome Extension版をダウンロード" width="118" height="44" class="rollover" /></a></li>
