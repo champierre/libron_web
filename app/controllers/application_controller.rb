@@ -5,11 +5,10 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
   $FIREFOX_ADDON_URL = "https://addons.mozilla.org/ja/firefox/addon/161619/"
-  # $FIREFOX_ADDON_URL = "http://libron.net/addon/libron.xpi"
   $CHROME_EXTENSION_URL = "https://chrome.google.com/webstore/detail/fpfgglfemmnflnmjminpghmeiajcajoi"
-  $SAFARI_EXTENSION_URL = "http://bit.ly/libron_safari"
-  $IPHONE_APPSTORE_URL = "http://itunes.apple.com/jp/app/libron/id478517535?mt=8"
-  $GM_SCRIPT_URL = "http://www.libron.net/greasemonkey/libron.user.js"
+  $SAFARI_EXTENSION_URL = "https://bit.ly/libron_safari"
+  $IPHONE_APPSTORE_URL = "https://itunes.apple.com/jp/app/libron/id478517535?mt=8"
+  $GM_SCRIPT_URL = "https://www.libron.net/greasemonkey/libron.user.js"
 
   $AMAZON_AFFILIATE_ID = "tsukurusha-libron-22"
 
