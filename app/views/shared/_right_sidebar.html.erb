@@ -4,16 +4,15 @@
 <div id="sub-area">
 <% if (params[:controller] == 'top' && params[:action] != 'index') || params[:controller] == 'books' %>
 <ul id="download">
-  <li class="upperline"><a href="<%= $CHROME_EXTENSION_URL %>" target="_blank"><img src="/images/images-home/btn_dl_chrome.png" alt="Chrome Extension版をダウンロード" title="Chrome Extension版をダウンロード" width="118" height="44" class="rollover" /></a></li>
-  <li class="upperline even"><a href="/top/install?browser=Firefox" target="_blank"><img src="/images/images-home/btn_dl_firefox.png" alt="Firefox Greasemonkey 版をダウンロード" title="Firefox Greasemonkey 版をダウンロード" width="118" height="44" class="rollover" /></a></li>
-  <li><a href="/iphone/" target="_blank"><img src="/images/images-home/btn_dl_iphone.png" alt="iPhone版をダウンロード" title="iPhone版をダウンロード" width="118" height="44" class="rollover" /></a></li>
+  <li class="upperline"><a href="<%= $CHROME_EXTENSION_URL %>" target="_blank"><%= image_tag "images-home/btn_dl_chrome.png", alt: "Chrome Extension版をダウンロード", title: "Chrome Extension版をダウンロード", width: "118", height: "44", class: "rollover" %></a></li>
+  <li class="upperline even"><a href="/top/install?browser=Firefox" target="_blank"><%= image_tag "images-home/btn_dl_firefox.png", alt: "Firefox Greasemonkey 版をダウンロード", title: "Firefox Greasemonkey 版をダウンロード", width: "118", height: "44", class: "rollover" %></a></li>
 </ul>
 <% end %>
 
 <%= render :partial => 'shared/facebook_like_box' %>
 
 <ul>
-<li><a href="http://blog.champierre.com/858" target="_blank"><img src="/images/btn_blog.png" alt="開発者ブログ" title="開発者のブログ「僕は発展途上技術者」へ" width="110" height="30" class="rollover" /></a></li>
-<li><a href="http://twitter.com/jishiha" target="_blank"><img src="/images/btn_twitter.png" alt="@jishiha のタイムラインへ" title="@jishiha のタイムラインへ" width="95" height="30" class="rollover" /></a></li>
+<li><a href="http://blog.champierre.com/858" target="_blank"><%= image_tag 'btn_blog.png', alt: "開発者ブログ", title: "開発者のブログ「僕は発展途上技術者」へ", width: "110", height: "30", class: "rollover" %></a></li>
+<li><a href="http://twitter.com/jishiha" target="_blank"><%= image_tag 'btn_twitter.png', alt: "@jishiha のタイムラインへ", title: "@jishiha のタイムラインへ", width: "95", height: "30", class: "rollover" %></a></li>
 </ul>
 <!-- /div#sub-area --></div>

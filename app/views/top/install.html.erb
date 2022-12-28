@@ -18,7 +18,7 @@
 <% if @browser == 'Chrome' %>
 
 <div class="for-chrome-user" id="chrome">
-<h2><img src="/images/images-subpage/h2_forchromeuser.png" alt="Google Chrome ユーザーの方へ" width="650" height="80" /></h2>
+<h2><%= image_tag "images-subpage/h2_forchromeuser.png", alt: "Google Chrome ユーザーの方へ", width: "650", height: "80" %></h2>
 
 <div class="flow">
 <h2 class="num1">Libron をインストールします</h2>
@@ -31,7 +31,7 @@
 
 <div class="for-firefox-user" id="firefox">
 
-<h2><img src="/images/images-subpage/h2_forfirefoxuser.png" alt="Firefox ユーザーの方へ" width="650" height="80" /></h2>
+<h2><%= image_tag "images-subpage/h2_forfirefoxuser.png", alt: "Firefox ユーザーの方へ", width: "650", height: "80" %></h2>
 
 <div class="flow">
 <h2 class="num1">Tampermonkeyをインストールします</h2>
@@ -43,21 +43,21 @@
 <p>次に以下のリンク先より、Libron Greasemonkey版をインストールします。</p>
 <p><a target="_blank" href="<%= $GM_SCRIPT_URL %>">&raquo; Libron for Greasemonkey</a></p>
 <p>上記リンクをクリックすると、Tampermonkeyの画面が表示され、インストールの確認を求められます。「インストール」をクリックしてLibronをインストールします。</p>
-<p><img src="/images/tampermonkey.png" alt="Libron Greasemonkey版のインストール" width="634" height="478"/></p>
+<p><%= image_tag "tampermonkey.png", alt: "Libron Greasemonkey版のインストール", width: "634", height: "478" %></p>
 
 <h2 class="num3">クロスドメインアクセスの許可</h2>
 <p>Libronをインストールできたら、Amazonのページ(https://www.amazon.co.jp/)にアクセスします。</p>
 <p>Libronの最新情報と蔵書検索の結果を取得するためLibronはlibron.netとapi.calil.jpにアクセスする必要があります。2つのサーバーに対するクロスドメインアクセスの許可を求める画面が表示されるので、両方とも「Always allow domain」のボタンをクリックして許可してください。</p>
 <p>以上でLibronをFirefoxで使う準備は完了です。</p>
-<p><img src="/images/tampermonkey2.png" alt="Libron Greasemonkey版のインストール" width="650" height="449"/></p>
-<p><img src="/images/tampermonkey3.png" alt="Libron Greasemonkey版のインストール" width="650" height="341"/></p>
+<p><%= image_tag "tampermonkey2.png", alt: "Libron Greasemonkey版のインストール", width: "650", height: "449" %></p>
+<p><%= image_tag "tampermonkey3.png", alt: "Libron Greasemonkey版のインストール", width: "650", height: "341" %></p>
 <!-- /div.flow --></div>
 <!-- /div#firefox --></div>
 
 <% elsif @browser == 'Safari' %>
 
 <div class="for-iphone-user" id="iphone">
-<h2><img src="/images/images-subpage/h2_foriphoneuser.png" alt="iPhone ユーザーの方へ" width="650" height="80" /></h2>
+<h2><%= image_tag "images-subpage/h2_foriphoneuser.png", alt: "iPhone ユーザーの方へ", width: "650", height: "80" %></h2>
 
 <div style="margin:2em 0 13px">
 <div class="flow">
