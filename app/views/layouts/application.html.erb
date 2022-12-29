@@ -14,6 +14,7 @@
 <script type="text/javascript" src="/javascripts/function.js"></script>
 <meta property="og:image" content="<%= image_url '/images/logo.png' %>" />
 <meta name="apple-itunes-app" content="app-id=478517535">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
 <%- if @content_for_page_scripts -%>
 <script type="text/javascript" charset="UTF-8">
 //<![CDATA[
@@ -23,6 +24,8 @@
 <%- end -%>
 </head>
 <body id="<%= (params[:controller] == 'top' && params[:action] == 'index') ? 'home' : 'subpage' %>">
+
+<a class="github-fork-ribbon" href="https://github.com/champierre/libron" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
 
 <%= render :partial => "shared/facebook_like_box_script" %>
 
