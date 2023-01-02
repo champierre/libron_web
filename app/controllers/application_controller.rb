@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   $CHROME_EXTENSION_URL = "https://chrome.google.com/webstore/detail/fpfgglfemmnflnmjminpghmeiajcajoi"
   $SAFARI_EXTENSION_URL = "https://bit.ly/libron_safari"
   $IPHONE_APPSTORE_URL = "https://itunes.apple.com/jp/app/libron/id478517535?mt=8"
-  $GM_SCRIPT_URL = "https://www.libron.net/greasemonkey/libron.user.js"
+  $GM_SCRIPT_URL = "https://github.com/champierre/libron/raw/master/greasemonkey/libron.user.js"
 
   $AMAZON_AFFILIATE_ID = "tsukurusha-libron-22"
 
