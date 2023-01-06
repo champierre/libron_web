@@ -22,8 +22,14 @@
 
 <div class="flow">
 <h2 class="num1">Libron をインストールします</h2>
-<p>以下のリンク先より、Libron の Chrome Extension 版をインストールすれば完了です。<br />
+<p>以下のリンク先より、Libron の Chrome Extension 版をインストールします。<br />
 <a target="_blank" href="<%= $CHROME_EXTENSION_URL %>">&raquo; Libron - Google Chrome extension gallery</a></p>
+<p><%= image_tag "/images/install/chrome_extension.png", alt: "Libron Chrome Extension版のインストール" %></p>
+
+<h2 class="num2">Libron を拡張機能のバーに固定する</h2>
+<p>Chrome のメニュー右端の方に表示されている拡張機能のアイコン（パズルのピースの形）をクリックし、Libron の右横のピンのアイコンをクリックして拡張機能のバーに固定して常に Libron のアイコンが表示されるようにしておきます。</p>
+<p><%= image_tag "/images/install/extension_bar.png", alt: "拡張機能バーに固定" %></p>
+
 <!-- /div.flow --></div>
 <!-- /div#chrome --></div>
 
@@ -43,21 +49,21 @@
 <p>次に以下のリンク先より、Libron Greasemonkey版をインストールします。</p>
 <p><a target="_blank" href="<%= $GM_SCRIPT_URL %>">&raquo; Libron for Greasemonkey</a></p>
 <p>上記リンクをクリックすると、Tampermonkeyの画面が表示され、インストールの確認を求められます。「インストール」をクリックしてLibronをインストールします。</p>
-<p><%= image_tag "/images/tampermonkey.png", alt: "Libron Greasemonkey版のインストール", width: "634", height: "478" %></p>
+<p><%= image_tag "/images/tampermonkey.png", alt: "Libron Greasemonkey版のインストール" %></p>
 
 <h2 class="num3">クロスドメインアクセスの許可</h2>
 <p>Libronをインストールできたら、Amazonのページ(https://www.amazon.co.jp/)にアクセスします。</p>
 <p>Libronの最新情報と蔵書検索の結果を取得するためLibronはlibron.netとapi.calil.jpにアクセスする必要があります。2つのサーバーに対するクロスドメインアクセスの許可を求める画面が表示されるので、両方とも「Always allow domain」のボタンをクリックして許可してください。</p>
 <p>以上でLibronをFirefoxで使う準備は完了です。</p>
-<p><%= image_tag "/images/tampermonkey2.png", alt: "Libron Greasemonkey版のインストール", width: "650", height: "449" %></p>
-<p><%= image_tag "/images/tampermonkey3.png", alt: "Libron Greasemonkey版のインストール", width: "650", height: "341" %></p>
+<p><%= image_tag "/images/tampermonkey2.png", alt: "Libron Greasemonkey版のインストール" %></p>
+<p><%= image_tag "/images/tampermonkey3.png", alt: "Libron Greasemonkey版のインストール" %></p>
 <!-- /div.flow --></div>
 <!-- /div#firefox --></div>
 
 <% elsif @browser == 'Safari' %>
 
 <div class="for-iphone-user" id="iphone">
-<h2><%= image_tag "/images/images-subpage/h2_foriphoneuser.png", alt: "iPhone ユーザーの方へ", width: "650", height: "80" %></h2>
+<h2><%= image_tag "/images/images-subpage/h2_foriphoneuser.png", alt: "iPhone ユーザーの方へ" %></h2>
 
 <div style="margin:2em 0 13px">
 <div class="flow">

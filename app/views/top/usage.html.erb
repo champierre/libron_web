@@ -8,19 +8,22 @@
 ブラウザにインストールしてAmazonにアクセスするだけで、すぐにご利用できます。</p>
 <p><%= link_to '» インストール方法はこちらをご覧ください。', :controller => :top, :action => :install %></p>
 
-<%= render :partial => 'shared/demo_movie' %>
+<%#= render :partial => 'shared/demo_movie' %>
 
 <div class="flow">
-<h2 class="num1">Libronをインストールした状態で、Amazonにアクセスします。</h2>
-<p><%= image_tag "/images/images-subpage/libron1.png", alt: "Amazonのトップページ" %></p>
+<h2 class="num1">拡張機能バーのLibronのアイコンをクリックします。</h2>
+<p><%= image_tag "/images/usage/libron_icon.png", alt: "拡張機能バーのLibronのアイコン" %></p>
 
-<h2 class="num2">画面右上の「変更」をクリックし、最寄の図書館を選択します。</h2>
-<p><%= image_tag "/images/images-subpage/libron2.png", alt: "画面右上のプルダウンから選択" %></p>
+<h2 class="num2">図書館設定画面が開くので「変更」リンクをクリックします。</h2>
+<p><%= image_tag "/images/usage/popup.png", alt: "「変更」リンクをクリック" %></p>
+	
+<h2 class="num3">最寄りの図書館を選択し「保存」ボタンをクリックします</h2>
+<p><%= image_tag "/images/usage/popup2.png", alt: "最寄りの図書館を選択" %></p>
 
-<h2 class="num3">本を検索します。</h2>
-<p><%= image_tag "/images/images-subpage/libron3.png", width: "478", height: "90", alt: "本を検索" %></p>
+<h2 class="num4">本を検索します。</h2>
+<p><%= image_tag "/images/usage/amazon_search_bar.png", alt: "本を検索" %></p>
 
-<h2 class="num4">図書館のページにジャンプします。</h2>
-<p><%= image_tag "/images/images-subpage/libron4.png", width: "600", alt: "図書館ページへのリンクをクリック" %></p>
+<h2 class="num5">図書館にその本があれば図書館ページへのリンクが表示されます。</h2>
+<p><%= image_tag "/images/usage/amazon_page.png", alt: "図書館ページへのリンクをクリック" %></p>
 <!-- /div.flow --></div>
 <!-- /div#main-area --></div
