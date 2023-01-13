@@ -254,3 +254,8 @@ div.social_buttons {
 div.social_buttons div {
   float:left;
 }
+
+.animation {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
